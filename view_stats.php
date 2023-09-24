@@ -1,7 +1,7 @@
 <?php
-include "./config.inc.php";
-include "./dbcon.inc.php";
-include "./functions.inc.php";
+include "./include/config.inc.php";
+include "./include/dbcon.inc.php";
+include "./include/functions.inc.php";
 ?>
 
 <html>

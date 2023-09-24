@@ -80,6 +80,7 @@ function findStaff($role_id, $date_string, $week_no, $daytype) {
     if ($willsleep) {
         //sleep(10);
     }
+    sleep(0);
     return $res->num_rows;
 }
 

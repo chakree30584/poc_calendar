@@ -1,8 +1,7 @@
 <?php
-include "./config.inc.php";
-include "./dbcon.inc.php";
-include "./functions.inc.php";
-
+include "./include/config.inc.php";
+include "./include/dbcon.inc.php";
+include "./include/functions.inc.php";
 //get all roles
 $roles = getAllRoles();
 ?>
@@ -37,7 +36,13 @@ $roles = getAllRoles();
                 foreach ($roles as $key => $role) {
                     ?>
                     <tr>
-                        <td><?php echo $role["name"]; ?></td>
+                        <td>
+                            <b><?php echo $role["name"]; ?></b>
+                            <br>
+                            MIN: <?php echo $role["required_min"]; ?><br>
+                            MAX: <?php echo $role["required_max"]; ?><br>
+                            Priority: <?php echo $role["critical_order"]; ?>
+                        </td>
                         <td>
                             <table style="width:100%; text-align: center;">
                                 <?php
